@@ -18,17 +18,16 @@ Scoundrel is a solitaire card game where you delve into a dungeon represented by
 **Each Turn:**
 1. Draw cards until 4 are visible (forming the Room)
 2. Choose to either:
-   - **Avoid:** Place all 4 cards on the bottom of the deck (can't do twice in a row)
+   - **Avoid:** Place all 4 cards on the bottom of the deck (cannot do twice in a row)
    - **Face:** Resolve 3 of the 4 cards in any order you choose
 
 **Resolving Cards:**
-- **Weapon (♦):** Equip it immediately
+- **Weapon (♦):** Equip it immediately (replaces any current weapon)
 - **Potion (♥):** Heal by its value (max 1 per room, others discarded)
 - **Monster (♣♠):**
-  - Bare-handed: Take full damage
-  - With weapon: Damage = monster value − weapon value (min 0)
-  - If defeated, monster stacks on weapon
-  - Important: Can only use weapon on monsters with value ≤ your last defeated monster
+  - Bare-handed: You take full damage equal to the monster's value
+  - With weapon: Damage to you = monster value − weapon value (min 0). Your health decreases by this amount. The weapon remains equipped and the defeated monster is remembered
+  - Important: Can only use weapon on monsters with value ≤ your last defeated monster (initial limit is 0, so first monster must be fought bare-handed)
 
 **Card Values:** 2–10 = face value, J=11, Q=12, K=13, A=14
 
@@ -55,7 +54,7 @@ Scoundrel is a solitaire card game where you delve into a dungeon represented by
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
